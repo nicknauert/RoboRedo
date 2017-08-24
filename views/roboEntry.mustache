@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{bot.name}}</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/">WORKING</a></li>
+          <li><a href="/">SEEKING WORK</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="iDPage">
+      <section class="idCont">
+        <img src='{{bot.avatar}}' alt="avatar">
+        <h2>{{bot.name}}</h2>
+        <p>{{#bot.address.city}}{{bot.address.city}},{{/bot.address.city}} <a href="/country/{{bot.address.country}}">{{bot.address.country}}</a> |
+        {{#bot.job}}{{bot.job}}{{/bot.job}}
+          {{^bot.job}}
+            <p class="noJob">Currently Seeking Employment</p>
+          {{/bot.job}} {{#bot.company}}{{bot.company}}{{/bot.company}}</p>
+        <p>{{bot.email}} | {{bot.phone}}</p>
+
+        <section class="bottom">
+          <p><b>Education:<br>Skills:</b></p> <p>{{#bot.university}}{{bot.university}}<br>{{/bot.university}} {{#bot.skills}} <a href="/skills/{{.}}">{{.}}</a><br>{{/bot.skills}}</p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 40px;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  padding: 15px 250px 0 250px;
+  background-color: rgb(55, 70, 108);
+}
+
+nav>ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  color: grey;
+  font-size: 60px;
+}
+
+.index {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.indEntry {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+  min-height: 250px;
+  width: 22%;
+  margin: 15px;
+  padding: 5px 15px;
+  border: 1px solid lightgrey;
+  font-size: 14px;
+  text-align: center;
+}
+
+.indEntry>img {
+  margin: 0 auto;
+}
+
+.indEntry a {
+  font-size: 17px;
+  text-align: center;
+  margin: 4px 0;
+  text-decoration: none;
+  color: blue;
+}
+
+.noJob {
+  color: rgb(251, 81, 64);
+}
+
+
+/*==========  idPage  ========*/
+
+.iDPage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.idCont {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.idCont>h2 {
+  padding-top: 40px;
+  font-size: 60px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+  color: rgb(64, 64, 64);
+}
+
+.idCont>p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.idCont>img {
+  margin-right: 30px;
+  margin-bottom: 10px;
+  float: left;
+  width: 25%;
+  border-radius: 100%;
+  border: 1px solid lightgrey;
+}
+
+.bottom {
+  text-align: left;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-top: 75px;
+  margin-left: 45px;
+}
+
+.bottom>p {
+  margin-left: 45px;
+}

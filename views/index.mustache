@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Robo-dex</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/employed">WORKING</a></li>
+        <li><a href="/unemployed">SEEKING WORK</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>RoboDex</h1>
+      <ul class="index">
+        {{#bots}}
+          <div class="indEntry">
+            {{>_indRobo}}
+          </div>
+        {{/bots}}
+      </ul>
+        {{^.}}
+          <p>No Robos To Show.</p>
+        {{/.}}
+    </main>
+  </body>
+</html>
