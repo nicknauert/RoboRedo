@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  font-weight: 300;
 }
 
 main {
@@ -11,26 +12,38 @@ main {
 
 nav {
   width: 100%;
-  height: 50px;
-  padding: 15px 250px 0 250px;
+  height: 40px;
+  padding: 11px 40px 0 90px;
   background-color: rgb(55, 70, 108);
 }
 
 nav>ul {
+  height: 40px;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
   list-style: none;
 }
 
+nav li {
+  height: 40px;
+}
+
 nav a {
+  font-size: 14px;
+  font-weight: 100;
   color: white;
   text-decoration: none;
 }
 
+.logoutLink {
+  align-self: flex-end;
+}
+
 h1 {
   text-align: center;
-  color: grey;
+  color: rgb(55, 70, 108);
   font-size: 60px;
 }
 
@@ -57,11 +70,19 @@ h1 {
 }
 
 .indEntry a {
-  font-size: 17px;
+  font-size: 19px;
   text-align: center;
   margin: 4px 0;
   text-decoration: none;
   color: blue;
+}
+
+.indEntry>a>h2 {
+  font-weight: 400;
+}
+
+.indEntry p {
+  font-size: 13px;
 }
 
 .noJob {
@@ -114,4 +135,99 @@ h1 {
 
 .bottom>p {
   margin-left: 45px;
+}
+
+
+/*==========  NewUserPage  ========*/
+
+.newUserH3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 13px;
+  color: rgb(46, 46, 46);
+}
+
+.newUserForm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+}
+
+.newUserForm>input {
+  height: 30px;
+  width: 250px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+
+.newUserForm>button {
+  width: 130px;
+  height: 30px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 2px;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+.newUserForm>button:hover {
+  background-color: rgb(203, 235, 247);
+}
+
+
+/*============= LOGIN =============*/
+
+.loginNav {
+  height: 60px;
+}
+
+.welcomeH3 {
+  font-size: 35px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.loginMain {
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+.loginForm>input {
+  height: 30px;
+  width: 250px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+
+.loginForm>button {
+  width: 90px;
+  height: 30px;
+  margin-top: 4px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 2px;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+.loginForm>button:hover {
+  background-color: rgb(203, 235, 247);
+}
+
+.createUserLink {
+  color: rgb(80, 78, 78);
+  font-size: 13px;
+  font-weight: 300;
 }

@@ -9,6 +9,10 @@ function getAllRobots(){
   return Robot.find()
 }
 
+function getRobotByUsername(name){
+  return Robot.findOne({ username: name})
+}
+
 function getUnemployed(){
   return Robot.find({job:null})
 }
@@ -21,11 +25,29 @@ function getBotsBySkill(skill){
 }
 
 function getBotsByCountry(country){
-  return Robot.find({ 'address.country': country})
+  return Robot.find({ 'address.country': country })
 }
 
 function getRobotById(roboId){
   return Robot.findOne({id:roboId})
+}
+
+function deleteRobot(roboId){
+  return Robot.findOne({ id: roboId }).remove();
+  console.log("Hey I deleted that guy.");
+}
+
+function createUser(newUser){
+  const robo = new Robot(newUser);
+  robo.save( function(err){
+    console.log(err);
+  })
+  console.log(chalk.green('New User Created'));
+  return Promise.resolve('success')
+}
+
+function logout(x){
+  x.destroy();
 }
 
 module.exports = {
@@ -34,7 +56,11 @@ module.exports = {
   getUnemployed,
   getEmployed,
   getBotsBySkill,
-  getBotsByCountry
+  getBotsByCountry,
+  getRobotByUsername,
+  deleteRobot,
+  logout,
+  createUser
 }
 
 //mongoimport --db robo-redo --collection robots --drop --file ~/data.json

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login To Robodex</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    {{>_nav}}
+    <main>
+      <h3 class="newUserH3">Create User/Robot</h3>
+      <form class="newUserForm" action="/newuser" method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="password" placeholder="Password">
+        <input type="text" name="name" placeholder="Full Name">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="country" placeholder="Country">
+        <input type="text" name="job" placeholder="Job">
+        <input type="text" name="company" placeholder="Company">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="phone" placeholder="Phone Number">
+        <input type="text" name="university" placeholder="University">
+        <button class="loginSubmit" type="submit" name="loginSubmit">Create User</button>
+      </form>
+    </main>
+  </body>
+</html>

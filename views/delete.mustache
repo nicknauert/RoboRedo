@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{bot.name}}</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header>
+      {{>_nav}}
+    </header>
+    <h3>Delete?</h3>
+    <form class="deleteForm" action="/delete/{{id}}" method="POST">
+      <h3>Really Delete?</h3>
+      <button type="submit" name="button">Yes</button>
+      <a href="/robot/{{id}}">No</a>
+    </form>
+  </body>
+</html>

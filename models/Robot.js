@@ -4,6 +4,7 @@ const RobotSchema = new mongoose.Schema({
   id: Number,
   username: String,
   name: String,
+  password: String,
   job: String,
   avatar: String,
   email: String,
@@ -21,9 +22,7 @@ const RobotSchema = new mongoose.Schema({
      country: String }
 })
 
-// RobotSchema.statics.getEmployed = function(job, cb) {
-//   return this.find({job: {$ne: {'null'}}})
-// }
+
 
 
 

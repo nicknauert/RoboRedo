@@ -7,13 +7,7 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/">WORKING</a></li>
-          <li><a href="/">SEEKING WORK</a></li>
-        </ul>
-      </nav>
+      {{>_nav}}
     </header>
     <main class="iDPage">
       <section class="idCont">
@@ -28,6 +22,10 @@
 
         <section class="bottom">
           <p><b>Education:<br>Skills:</b></p> <p>{{#bot.university}}{{bot.university}}<br>{{/bot.university}} {{#bot.skills}} <a href="/skills/{{.}}">{{.}}</a><br>{{/bot.skills}}</p>
+        </section>
+        <section>
+          <a href="/edit/{{bot.id}}">Edit Entry</a>
+          <a href="/delete/{{bot.id}}" data-method="delete" rel="no-follow">Delete Entry</a>
         </section>
       </section>
     </main>
