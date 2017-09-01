@@ -11,15 +11,16 @@
     </header>
     <main class="iDPage">
       <h3>Edit User/Robot</h3>
-      <form class="editRobo" action="/edit/{{bot.id}}" method="post">
-        <input type="text" name="name" value="">
-        <input type="text" name="city" value="">
-        <input type="text" name="country" value="">
-        <input type="text" name="job" value="">
-        <input type="text" name="company" value="">
-        <input type="text" name="email" value="">
-        <input type="text" name="phone" value="">
-        <input type="text" name="university" value="">
+      <form class="editRobo" action="/edit/{{bot._id}}" method="POST">
+        <input type="text" name="name" value="{{bot.name}}" placeholder="Name">
+        <input type="text" name="city" value="{{bot.city}}" placeholder="City">
+        <input type="text" name="country" value="{{bot.country}}" placeholder="Country">
+        <input type="text" name="job" value="{{bot.job}}" placeholder="Job">
+        <input type="text" name="company" value="{{bot.company}}" placeholder="Company">
+        <input type="text" name="email" value="{{bot.email}}" placeholder="Email">
+        <input type="text" name="phone" value="{{bot.phone}}" placeholder="Phone Number">
+        <input type="text" name="university" value="{{bot.university}}" placeholder="University">
+        <button type="submit" name="button"> Submit</button>
       </form>
     </main>
   </body>

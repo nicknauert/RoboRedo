@@ -29,11 +29,11 @@ function getBotsByCountry(country){
 }
 
 function getRobotById(roboId){
-  return Robot.findOne({id:roboId})
+  return Robot.findOne({_id:roboId})
 }
 
 function deleteRobot(roboId){
-  return Robot.findOne({ id: roboId }).remove();
+  return Robot.findOne({ _id: roboId }).remove();
   console.log("Hey I deleted that guy.");
 }
 
@@ -44,6 +44,20 @@ function createUser(newUser){
   })
   console.log(chalk.green('New User Created'));
   return Promise.resolve('success')
+}
+
+function editRobot(id, newBot){
+  return Robot.findOneAndUpdate( {_id: id}, newBot)
+}
+
+function loggedIn(req, res, next){
+  if(!req.user){
+    console.log(chalk.red("Not logged. Sending to login."));
+    res.redirect('/login')
+  } else {
+    console.log(chalk.green("You're good. Move Along."));
+    next();
+  }
 }
 
 function logout(x){
@@ -60,7 +74,9 @@ module.exports = {
   getRobotByUsername,
   deleteRobot,
   logout,
-  createUser
+  createUser,
+  loggedIn,
+  editRobot
 }
 
 //mongoimport --db robo-redo --collection robots --drop --file ~/data.json

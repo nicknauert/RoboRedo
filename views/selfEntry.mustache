@@ -11,9 +11,7 @@
     </header>
     <main class="iDPage">
       <section class="idCont">
-        {{#bot.avatar}}
         <img src='{{bot.avatar}}' alt="avatar">
-        {{/bot.avatar}}
         <h2>{{bot.name}}</h2>
         <p>{{#bot.address.city}}{{bot.address.city}},{{/bot.address.city}} <a href="/country/{{bot.address.country}}">{{bot.address.country}}</a> |
         {{#bot.job}}{{bot.job}}{{/bot.job}}
@@ -27,6 +25,7 @@
         </section>
         <section>
           <a href="/delete/{{bot._id}}" data-method="delete" rel="no-follow">Delete Entry</a>
+          <a href="/edit/{{bot._id}}">Edit Entry</a>
         </section>
       </section>
     </main>
