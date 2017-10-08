@@ -153,7 +153,7 @@ app.post('/edit/:id', dal.loggedIn, (req, res) => {
   })
 })
 
-app.get('/newuser', dal.loggedIn, (req, res) => {
+app.get('/newuser', (req, res) => {
   res.render('newuser');
 })
 
